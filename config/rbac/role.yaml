@@ -1,0 +1,85 @@
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  creationTimestamp: null
+  name: manager-role
+rules:
+- apiGroups:
+  - pequod.soal.one
+  resources:
+  - abstractions
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - pequod.soal.one
+  resources:
+  - abstractions/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - pequod.soal.one
+  resources:
+  - abstractions/status
+  verbs:
+  - get
+  - patch
+  - update
+- apiGroups:
+  - pequod.soal.one
+  resources:
+  - claims
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - pequod.soal.one
+  resources:
+  - claims/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - pequod.soal.one
+  resources:
+  - claims/status
+  verbs:
+  - get
+  - patch
+  - update
+- apiGroups:
+  - pequod.soal.one
+  resources:
+  - concretions
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - pequod.soal.one
+  resources:
+  - concretions/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - pequod.soal.one
+  resources:
+  - concretions/status
+  verbs:
+  - get
+  - patch
+  - update

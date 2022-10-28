@@ -1,0 +1,7 @@
+apiVersion: pequod.soal.one/v1alpha1
+kind: Concretion
+metadata:
+  name: simple-concretion
+spec:
+  template: |
+    foo: bar

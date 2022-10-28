@@ -1,0 +1,34 @@
+domain: soal.one
+layout:
+- go.kubebuilder.io/v3
+projectName: pequod
+repo: github.com/soal-one/pequod/v2
+resources:
+- api:
+    crdVersion: v1
+    namespaced: true
+  controller: true
+  domain: soal.one
+  group: pequod
+  kind: Abstraction
+  path: github.com/soal-one/pequod/v2/api/v1alpha1
+  version: v1alpha1
+- api:
+    crdVersion: v1
+    namespaced: true
+  controller: true
+  domain: soal.one
+  group: pequod
+  kind: Concretion
+  path: github.com/soal-one/pequod/v2/api/v1alpha1
+  version: v1alpha1
+- api:
+    crdVersion: v1
+    namespaced: true
+  controller: true
+  domain: soal.one
+  group: pequod
+  kind: Claim
+  path: github.com/soal-one/pequod/v2/api/v1alpha1
+  version: v1alpha1
+version: "3"

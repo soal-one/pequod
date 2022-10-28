@@ -1,0 +1,20 @@
+# permissions for end users to view abstractions.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: abstraction-viewer-role
+rules:
+- apiGroups:
+  - pequod.soal.one
+  resources:
+  - abstractions
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - pequod.soal.one
+  resources:
+  - abstractions/status
+  verbs:
+  - get

@@ -1,0 +1,20 @@
+# permissions for end users to view concretions.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: concretion-viewer-role
+rules:
+- apiGroups:
+  - pequod.soal.one
+  resources:
+  - concretions
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - pequod.soal.one
+  resources:
+  - concretions/status
+  verbs:
+  - get

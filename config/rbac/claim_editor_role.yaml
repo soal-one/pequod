@@ -1,0 +1,24 @@
+# permissions for end users to edit claims.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: claim-editor-role
+rules:
+- apiGroups:
+  - pequod.soal.one
+  resources:
+  - claims
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - pequod.soal.one
+  resources:
+  - claims/status
+  verbs:
+  - get

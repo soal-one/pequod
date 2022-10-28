@@ -1,0 +1,9 @@
+apiVersion: pequod.soal.one/v1alpha1
+kind: Claim
+metadata:
+  name: claim-sample
+spec:
+  type: simple-concretion
+  parameters:
+    - bar
+    - baz

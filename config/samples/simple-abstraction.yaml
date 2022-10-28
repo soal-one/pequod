@@ -1,0 +1,9 @@
+apiVersion: pequod.soal.one/v1beta1
+kind: Abstraction
+metadata:
+  name: abstraction-sample
+spec:
+  name: MooMessage
+  template: |
+    input: cowMessage: string
+    input: cowMessage: 1337

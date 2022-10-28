@@ -1,0 +1,6 @@
+apiVersion: pequod.soal.one/v1beta1
+kind: Concretion
+metadata:
+  name: concretion-sample
+spec:
+  # TODO(user): Add fields here

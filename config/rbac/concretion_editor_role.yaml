@@ -1,0 +1,24 @@
+# permissions for end users to edit concretions.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: concretion-editor-role
+rules:
+- apiGroups:
+  - pequod.soal.one
+  resources:
+  - concretions
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - pequod.soal.one
+  resources:
+  - concretions/status
+  verbs:
+  - get
